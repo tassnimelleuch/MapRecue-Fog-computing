@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from collections import Counter
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Listes de mots pour l'analyse de sentiment
 POSITIVE_WORDS = {
@@ -70,7 +70,7 @@ def analyze_facebook_comments():
 def health_check():
     return jsonify({'status': 'healthy', 'node': 'facebook_processor'})
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     print("📘 Nœud Facebook d'Analyse de Sentiments démarré")
     print("📍 Port: 5002")
     print("📊 Responsable: Traitement des commentaires Facebook") 
